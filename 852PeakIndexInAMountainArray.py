@@ -4,13 +4,11 @@ class Solution:
         :type A: List[int]
         :rtype: int
         """
-        low = 0
-        high = len(A)-1
-        mid = 0
-        while low < high:
-            mid = low + (high - low)/2
-            if A[mid]>A[mid-1]:
-                high = mid
-            else: 
-                low = mid + 1
-        return low
+        lo, hi = 0, len(A) - 1
+        while lo < hi:
+            mi = (lo + hi) / 2
+            if A[mi] < A[mi + 1]:
+                lo = mi + 1
+            else:
+                hi = mi
+        return lo
