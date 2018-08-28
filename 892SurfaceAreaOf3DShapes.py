@@ -1,4 +1,4 @@
-    class Solution:
+class Solution:
     def surfaceArea(self, grid):
         n, res = len(grid), 0
         for i in range(n):
